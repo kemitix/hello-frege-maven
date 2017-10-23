@@ -15,6 +15,7 @@
         <java.version>1.8</java.version>
         <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
         <exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
+        <onejar-maven-plugin.version>1.4.4</onejar-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -84,6 +85,23 @@
                         <argument>HelloFrege</argument>
                     </arguments>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.jolira</groupId>
+                <artifactId>onejar-maven-plugin</artifactId>
+                <version>${onejar-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <mainClass>HelloFrege</mainClass>
+                            <attachToBuild>true</attachToBuild>
+                            <filename>${project.build.finalName}.run.${project.packaging}</filename>
+                        </configuration>
+                        <goals>
+                            <goal>one-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
