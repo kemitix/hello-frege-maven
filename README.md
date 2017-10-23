@@ -34,7 +34,7 @@ Compile and run using maven:
 
 Create the executable uber-jar with:
 
-> `mvn package`.
+> `mvn package`
 
 The resulting jar file is created in `target/${project.name}-${project.version}.run.${project.packaging`. e.g. `target/hello-frege-1.0-SNAPSHOT.run.jar`
 
