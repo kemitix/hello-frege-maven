@@ -22,19 +22,19 @@ Create your source files in `src/main/frege/`.
 
 Compile to create the Java source files from your Frege sources and them compile them into `.class` files. These java files are created in `target/generated-sources`.
 
-> `mvn compile`
+> `./mvnw compile`
 
 ## Run
 
 Compile and run using maven:
 
-> `mvn compile exec:exec`
+> `./mvnw compile exec:exec`
 
 ## Package
 
 Create the executable uber-jar with:
 
-> `mvn package`
+> `./mvnw package`
 
 The resulting jar file is created in `target/${project.name}-${project.version}.run.${project.packaging`. e.g. `target/hello-frege-1.0-SNAPSHOT.run.jar`
 
